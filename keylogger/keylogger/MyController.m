@@ -28,7 +28,7 @@
     if (![out_str hasSuffix:@"\n"]) {
         out_str = [out_str stringByAppendingString:@"\n"];
     }
-    
+
     [buffer removeAllObjects];
 
     @try {
@@ -44,10 +44,10 @@
         NSLog(@"log_path: %@", log_path);
 
         NSFileHandle *out_file = [NSFileHandle fileHandleForWritingAtPath:log_path];
-        
+
         if (out_file == nil) {
             // If log file doesn't exist, create it and parent directory.
-            
+
             NSFileManager *filemgr;
             filemgr = [NSFileManager defaultManager];
             [filemgr createDirectoryAtPath:log_dir_path
@@ -56,7 +56,7 @@
             BOOL success = [filemgr createFileAtPath:log_path
                                             contents:[initial_str dataUsingEncoding:NSUTF8StringEncoding]
                                           attributes:nil];
-            
+
             if (success == YES) {
                 out_file = [NSFileHandle fileHandleForWritingAtPath:log_path];
             } else {
@@ -74,7 +74,6 @@
                               (int)round([curr_date timeIntervalSince1970]),
                               [e callStackSymbols]]
                              dataUsingEncoding:NSUTF8StringEncoding]];
-        
         @throw;
     }
 }
@@ -95,7 +94,7 @@
     NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:config_data options:0 error:&error];
     NSString *username = jsonDict[@"username"];
     NSLog(@"username: %@", username);
-    
+
     // Write buffers to files every 10 seconds.
     mouse_buffer = [NSMutableArray array];
     key_buffer = [NSMutableArray array];
@@ -112,7 +111,7 @@
         // (10.9 and later)
         const void * keys[] = { kAXTrustedCheckOptionPrompt };
         const void * values[] = { kCFBooleanTrue };
-        
+
         CFDictionaryRef options = CFDictionaryCreate(
                                                      kCFAllocatorDefault,
                                                      keys,
@@ -129,16 +128,16 @@
 
     // Add mouse click lines to a buffer.
     NSLog(@"registering input handlers");
-    
+
     [NSEvent
      addGlobalMonitorForEventsMatchingMask:NSLeftMouseUpMask
      handler:^ (NSEvent *event) {
          NSDate *curr_date = [NSDate date];
-         
+
          NSString *mouse_str = [
                                 NSString stringWithFormat:@"%@",
                                 NSStringFromPoint([event locationInWindow])];
-         
+
          NSString *line = [
                            NSString stringWithFormat:@"%i %@",
                            (int)round([curr_date timeIntervalSince1970]),
@@ -146,7 +145,7 @@
 
          [mouse_buffer addObject:line];
      }];
-    
+
     // Monitor keys too.
     [NSEvent
      addGlobalMonitorForEventsMatchingMask:NSKeyDownMask

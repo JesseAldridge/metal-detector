@@ -7,7 +7,7 @@ const Glob = require('glob');
 const ExpandHomeDir = require('expand-home-dir');
 
 function parse_keystrokes() {
-  const username = 'airbnb laptop';
+  const username = 'personal macbook 2012, felix';
 
   const MINUTE = 1, HOUR = 2;
   const resolution = MINUTE;
