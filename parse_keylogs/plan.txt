@@ -1,0 +1,69 @@
+What is the purpose?
+I want to understand how I'm spending my time.
+One way to get insight on this is analyze my keylogs.
+Process the signal to classify periods of activity.
+
+Does something else have higher priority?
+Making money does, but I've allocated time for this.
+
+What is the first step?  second?
+Parse the number of keys per minute (or whatever interval)
+Calculate the number of spikes without pause for each part of the graph
+Classify it as spiky-typing or not
+See how well that works on other data
+
+How are you going to test this?
+Will test manually
+
+How is this going to work in production?
+Not sure yet
+For now I'm just seeing if it works at all
+
+How can we divide up the work?
+I can do it
+
+What are the input formats?
+keylogs -> timeline -> classified timeline -> rendered graph
+
+Is this change going to break existing processes?
+No
+
+Is there an easier way?  (avoid coding)
+Code is already mostly written
+I can apply the algorithm manually for test purposes
+
+Is it worth it?
+Can I adapt something that already exists?
+Do I have enough time to see it through to completion?
+Can I preempt any blockers?
+  - big downloads, IT, app store reviews
+Is there anyone I can ask for advice?
+  - Is there a similar PR I can look at?
+  - Are there any docs for this system?
+What are the risks?
+How can we track usage?
+  - Add logging with timestamps
+Make sure everyone knows what they are doing
+  - Have the mobile team reviewed the plan?
+How are we going to integrate with other systems?
+Are there concurrency issues?
+How could this be done faster?
+  - Have the person who owns that part of the code do it
+Do you know what all the terms mean?
+  - "Post evaluation" comes before "Fixit"
+What are the edge cases?
+  - One item towards the bottom of the FAQ contains a bulleted list
+Can you enable ops to drive the content?
+Are any significant events coming up?
+  - Other project needs to launch in the middle of this one.
+Get design reviewed
+Is product ok with the plan?
+  - Sometimes they would rather get something quick and dirty.
+Create a diagram
+Are we following the spec exactly?
+  - The spec had camelCase but it should've had underscores.
+Do I have a fast feedback loop?
+  - Had to wait two minutes for a Hive query to run after every change.
+Is anyone else working on the same thing?
+  - Anomaly detection stepped on Data Science toes.
+Is this legal?

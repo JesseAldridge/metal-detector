@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "24CDE80077BC6242124C9AB2300F9E99F96C3E5B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3604E92C3FFB67C4CC5154BBA50657E78DAE2E7B" : 0,
+    "24CDE80077BC6242124C9AB2300F9E99F96C3E5B" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9D2A628C-FE6D-42F4-93FE-3B22FD626725",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3604E92C3FFB67C4CC5154BBA50657E78DAE2E7B" : "..",
+    "24CDE80077BC6242124C9AB2300F9E99F96C3E5B" : "keylogger\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "keylogger",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "keylogger\/keylogger.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:JesseAldridge\/work_logger.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "24CDE80077BC6242124C9AB2300F9E99F96C3E5B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:JesseAldridge\/Task-Ranger.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3604E92C3FFB67C4CC5154BBA50657E78DAE2E7B"
+    }
+  ]
+}
